@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <title>CerdasBudi - Mental Health Support</title>
+    <meta name="description" content="CerdasBudi adalah aplikasi AI yang memberikan dukungan mental health untuk korban bullying, dengan fitur chatbot, musik relaksasi, dan reminder positif.">
+    <meta name="keywords" content="mental health, bullying, bot AI mental health, AI chatbot, CerdasBudi AI, CerdasBudi, kesehatan mental, aplikasi anti bullying, dukungan psikologis, remaja, pelajar">
+    <meta name="google-site-verification" content="aZR-eaQFDJ6x4UJla8yykSOU6OCFaMD0ZQOWfjS3ZZA" />
+    <meta name="author" content="CerdasBudi Team">
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="CerdasBudi - AI untuk Dukungan Mental Health dan Anti-Bullying">
+    <meta property="og:description" content="Aplikasi AI yang mendukung kesehatan mental dan membantu korban bullying dengan fitur-fitur seperti chatbot, musik relaksasi, dan pengingat positif.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg"> <!-- Ganti dengan URL gambar -->
+    <meta property="og:url" content="https://cerdasbudi-chatapp.vercel.app"> <!-- Ganti dengan domain asli -->
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CerdasBudi - Mental Health & Anti-Bullying AI Support">
+    <meta name="twitter:description" content="Aplikasi AI untuk membantu korban bullying dan mendukung kesehatan mental remaja.">
+    <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg">
+
+    <!-- Web App Settings -->
+    <meta name="theme-color" content="#8B5CF6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="CerdasBudi">
+
+    <!-- 3D AI Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.22/build/spline-viewer.js"></script>
+
+    <style>
+      /* Loading screen */
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .loading-content {
+        text-align: center;
+        color: white;
+      }
+
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1rem;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <h2>CerdasBudi</h2>
+        <p>Memuat aplikasi...</p>
+      </div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      // Hide loading screen when app is ready
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          document.getElementById('loading').style.display = 'none';
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
