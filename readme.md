@@ -50,6 +50,8 @@ flowchart TD
 ](05_theming__dark_mode__.md)
 6. [Core Application State Management
 ](06_core_application_state_management_.md)
+7. [Getting Started
+](07_getting_started_.md)
 
 ---
 
